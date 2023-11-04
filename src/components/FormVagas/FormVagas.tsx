@@ -1,13 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { FormEvent, useState } from 'react'
-
 import { Forms, BtnPesquisar, Campo } from './styles'
+import { Props } from '.'
 
-export type Props = {
-  aoPesquisar: (termo: string) => void
-}
-
-const FormVagas = ({ aoPesquisar }: Props) => {
+export const FormVagas = ({ aoPesquisar }: Props) => {
   const [termo, setTermo] = useState<string>('')
 
   const aoEnviarForm = (e: FormEvent<HTMLFormElement>) => {
@@ -26,4 +22,3 @@ const FormVagas = ({ aoPesquisar }: Props) => {
     </Forms>
   )
 }
-export default FormVagas
